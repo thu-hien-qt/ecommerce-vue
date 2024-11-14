@@ -1,26 +1,38 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <div id="app">
+    <header-e/>
+    <div style="padding-top: 5px;"></div>
+    <category-menu />
+    <router-view/>
+    
+  </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 
 export default {
-  name: 'App',
-  components: {
-    HelloWorld
+  data() {
+    return {
+      selectedSubcategory: null
+    };
+  },
+  methods: {
+    updateSelectedSubcategory(subcategory) {
+      this.selectedSubcategory = subcategory;
+    }
   }
-}
+};
 </script>
 
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+  position: relative;
 }
 </style>

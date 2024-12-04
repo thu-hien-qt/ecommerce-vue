@@ -1,11 +1,8 @@
 <template>
-  <div id="app">
     <header-e/>
     <div style="padding-top: 5px;"></div>
-    <category-menu />
     <router-view/>
-    
-  </div>
+  
 </template>
 
 <script>
